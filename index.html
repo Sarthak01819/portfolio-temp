@@ -2,227 +2,418 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/output.css">
-    <title>Sarthak Singh - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sarthak Singh — Portfolio</title>
 
+    <!-- If you want a quick preview without building Tailwind, uncomment the CDN below.
+       For production use your src/output.css (Tailwind built file) as before. -->
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="src/output.css" />
+    <style>
+        /* small custom styles for subtle animations (optional if you want to keep everything Tailwind-only) */
+        .glow {
+            box-shadow: 0 6px 30px rgba(99, 102, 241, 0.12), 0 1px 0 rgba(99, 102, 241, 0.06) inset;
+        }
+    </style>
 </head>
 
-<body class="bg-[#0b0b0b]">
-    <!-- Nav Starts here -->
-    <nav class="w-full fixed flex justify-between px-2 bg-white" style="height: 3rem;">
-        <!-- <div class="text-black font-bold text-4xl cursor-pointer">SARTHAK</div> -->
-        <img style="height: 47px;" src="images/s-png-28667.png" alt="Sarthak Singh">
-        <div class="">
-            <ul class="p-3 text-black font-medium hidden md:flex">
-                <li class="px-4 cursor-pointer"><a href="index.html">Home</a></li>
-                <li class="px-4 cursor-pointer"><a href="error.html">About</a></li>
-                <li class="px-4 cursor-pointer"><a href="sevices.html">Services</a></li>
-                <li class="px-4 cursor-pointer"><a href="projects.html">Projects</a></li>
-            </ul>
-        </div>
-        <div class="text-black text-2xl font-medium hidden md:flex"><button><a href="contact.html">CONTACT</a></button>
-        </div>
-        <button class=" md:hidden p-2" onclick="handleMenu()"><img style="height: 30px; width: auto; color: black; "
-                src="images/menu.png" alt="Menu Button"></button>
+<body class="bg-[#0b0b0b] text-white antialiased">
 
-        <div id="nav-dialog" class="fixed hidden bg-white inset-0 px-2" style="height: 3rem;">
-            <div id="nav-bar" class="flex justify-between">
-                <img style="height: 47px;" src="images/s-png-28667.png" alt="Sarthak Singh">
-                <button class=" md:hidden p-2" onclick="handleMenu()"><img
-                        style="height: 26px; width: auto; color: black; " src="images/close.png"
-                        alt="Menu Button"></button>
-            </div>
-            <div class="bg-white" style="margin-top: 1rem; border-radius: 10px;">
-                <a class="font-medium m-3 p-3 block" href="index.html">Home</a>
-                <a class="font-medium m-3 p-3 block" href="error.html">About</a>
-                <a class="font-medium m-3 p-3 block" href="sevices.html">Services</a>
-                <a class="font-medium m-3 p-3 block" href="projects.html">Projects</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav ends here -->
+    <!-- NAV -->
+    <header class="fixed inset-x-0 top-0 z-50">
+        <nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 backdrop-blur-lg shadow-lg">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="images/s-png-28667.png" alt="Sarthak Singh" class="h-10 w-auto drop-shadow-md">
+      <span class="text-white font-extrabold text-2xl tracking-wide hover:text-blue-300 transition-all duration-300">
+        SARTHAK
+      </span>
+    </a>
 
-    <!-- Profile starts here -->
-    <div class="text-white flex flex-wrap justify-around items-center p-10 " style="padding-bottom: 5rem;">
-        <div class="" style="width: 16rem; padding-top: 8rem; ">
-            <div class="text-white text-4xl">I'm <span class="font-medium">Sarthak Singh </span></div>
-            <div class="text-4xl text-white"> a <span class="font-medium">Developer</span></div>
-            <p class=" text-white text-center" style="padding-top: 20px;"> Passionate developer with expertise in
-                front-end and back-end technologies.I build scalable, user-friendly applications with clean,
-                efficient code. Love solving complex problems and staying updated with the latest tech trends. Let’s
-                collaborate to turn ideas into reality.</p>
-        </div>
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-white font-medium text-lg">
+      <li><a href="index.html" class="hover:text-blue-400 transition-all duration-300">Home</a></li>
+      <li><a href="error.html" class="hover:text-blue-400 transition-all duration-300">About</a></li>
+      <li><a href="services.html" class="hover:text-blue-400 transition-all duration-300">Services</a></li>
+      <li><a href="projects.html" class="hover:text-blue-400 transition-all duration-300">Projects</a></li>
+    </ul>
 
-        <div>
-            <img class="h-auto" style="width: 23rem; padding-top: 8rem;" src="images/pfp.jpg" alt="Sarthak Singh">
-
-        </div>
-
-        <div class="flex flex-col  ">
-            <div class="text-white justify-items-center text-xl font-bold flex"
-                style="padding-top: 5rem; padding-bottom: 0.5rem;"><img
-                    style="height: 23px; width: auto; margin-right: 5px; margin-top: 5px;" src="images/tech-stack.png"
-                    alt="Tech Stack">Tech Stack
-            </div>
-            <div class="text-white grid  my-4"
-                style="grid-template-columns: 10rem 10rem; grid-template-rows: 2.5rem 2.5rem 2.5rem 2.5rem;">
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/tailwind.png" alt="tailwind"> Tailwind</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/nodejs.png" alt=""> Node js</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/javascript.png" alt=""> JavaScript</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/pythonlogo.png" alt=""> Python</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/githublogo.png" alt=""> GitHub</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/javalogo.png" alt=""> Java</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/figmalogo.png" alt=""> Figma</div>
-                <div class="flex"> <img style="height: 18px; width: auto; margin-top: 3px; margin-right: 5px;"
-                        src="images/premiere-pro.png" alt=""> Premiere Pro</div>
-            </div>
-        </div>
+    <!-- Contact Button -->
+    <div class="hidden md:block">
+      <a href="contact.html" class="px-5 py-2 bg-white text-blue-900 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-md">
+        Contact
+      </a>
     </div>
-    <!-- Profile ends here -->
 
-    <!-- Services section starts here -->
-    <div class="" style="padding-bottom: 4rem;">
-        <div class="text-white text-4xl font-bold justify-items-center" style="padding-top: 6rem;">
-            <h1 class="border-white border-b-2">SERVICES</h1>
-        </div>
-        <div class="justify-items-center">
-            <div class=" text-white justify-center flex flex-col flex-wrap" style="width: 80vw;">
-                <div>
-                    <div class="text-4xl font-medium" style="padding-top: 4rem;">Web Design</div>
-                    <p class="py-2 mt-2">Creative web designer crafting stunning, user-friendly websites. Passionate
-                        about clean layouts, intuitive UX, and responsive design. Let’s bring your vision to life! 🎨
-                    </p>
-                    <p><span class="font-bold">Skills :</span> UI/UX, Figma, Adobe XD, HTML/CSS, WordPress, Webflow.</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-medium" style="padding-top: 4rem;">Development</div>
-                    <p class="py-2 mt-2">Passionate developer specializing in clean, efficient code. Love turning ideas
-                        into scalable, user-friendly solutions. Let’s build something great! 🚀</p>
-                    <p><span class="font-bold">Skills :</span> React, Node.js, Python , cloud tech.</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-medium" style="padding-top: 4rem;">UI/UX Designer</div>
-                    <p class="py-2 mt-2">UI/UX designer passionate about crafting intuitive, visually stunning
-                        interfaces. I blend creativity with user-centered design to deliver seamless digital
-                        experiences. 🎨✨</p>
-                    <p><span class="font-bold">Skills :</span> Figma, Adobe XD, Prototyping, Wireframing, Design
-                        Systems.</p>
-                </div>
-                <div>
-                    <div class="text-4xl font-medium" style="padding-top: 4rem;">Video Editing</div>
-                    <p class="py-2 mt-2">Creative video editor specializing in dynamic storytelling through seamless
-                        cuts, motion graphics, and color grading. Let’s bring your vision to life! 🎬✨</p>
-                    <p><span class="font-bold">Skills :</span> Adobe Premiere Pro, CapCut, DaVinci Resolve.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Services section ends here -->
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
 
-    <!-- Project section starts here -->
-    <div class="border-b-2 border-white" style="padding-bottom: 4rem;;">
-        <div class="text-white text-4xl font-bold justify-items-center "
-            style="padding-top: 6rem; padding-bottom: 8rem;">
-            <h1 class="border-white border-b-2">PROJECTS</h1>
-        </div>
-        <div class="flex flex-wrap justify-center items-center">
-            <div class="justify-center"><img class="w-auto p-2"
-                    style="height: 20rem; margin-right: 5rem; margin-bottom: 5rem;" src="images/NetflixClone.jpg"
-                    alt=""></div>
-            <div class="text-white text-wrap p-2 " style="height: auto; width: 35rem; ">
-                <div class="text-4xl font-bold " style="padding-bottom: 2rem;">Netflix Clone</div>
-                <p class="text-sm font-medium justify-items-center">Built a responsive Netflix homepage clone with HTML
-                    & CSS, featuring a
-                    hero section, movie rows, and hover effects. Pure front-end—no JavaScript! 🎥✨</p>
-            </div>
-        </div>
-        <div class="flex flex-wrap justify-center items-center" style="padding-top: 4rem;">
-            <div><img class="w-auto p-2" style="height: 20rem; margin-right: 5rem; margin-bottom: 5rem;"
-                    src="images/DummyPortfolio.jpg" alt=""></div>
-            <div class="text-white text-wrap p-2 " style="height: auto; width: 35rem; ">
-                <div class="text-4xl font-bold " style="padding-bottom: 2rem;">Responsive Dummy Portfolio</div>
-                <p class="text-sm font-medium justify-items-center">Build a sleek dummy portfolio homepage with HTML for
-                    structure, CSS for
-                    styling, and JavaScript for interactivity. Showcase projects, skills, and contact info in a
-                    responsive, modern layout. 🚀 #WebDev.</p>
-            </div>
-        </div>
-        <div class="flex flex-wrap justify-center items-center" style="padding-top: 4rem;">
-            <div><img class="w-auto p-2" style="height: 20rem; margin-right: 5rem; margin-bottom: 5rem;"
-                    src="images/spotifyclone.png" alt=""></div>
-            <div class="text-white text-wrap p-2 " style="height: auto; width: 35rem; ">
-                <div class="text-4xl font-bold " style="padding-bottom: 2rem;">Spotify Clone</div>
-                <p class="text-sm font-medium justify-items-center">A web-based music player built with HTML, CSS, and JavaScript, replicating the core features of Spotify. It includes dynamic song fetching, play/pause, next/previous, shuffle, volume control, and keyboard shortcuts, all within a clean and responsive Spotify-inspired UI.</p>
-            </div>
-        </div>
-    </div>
-    <!-- Project section ends here -->
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col md:hidden bg-gradient-to-b from-blue-900 to-purple-900 px-6 py-4 space-y-4">
+    <a href="index.html" class="text-white text-lg hover:text-blue-300 transition">Home</a>
+    <a href="error.html" class="text-white text-lg hover:text-blue-300 transition">About</a>
+    <a href="services.html" class="text-white text-lg hover:text-blue-300 transition">Services</a>
+    <a href="projects.html" class="text-white text-lg hover:text-blue-300 transition">Projects</a>
+    <a href="contact.html" class="text-white text-lg font-semibold bg-blue-500 py-2 rounded-full text-center hover:bg-blue-600 transition">Contact</a>
+  </div>
+</nav>
 
-    <!-- Contact Now & Skill Starts Box -->
-    <div style="padding-bottom: 4rem;">
-        <div class="text-white  justify-items-center" style="padding-top: 2.5rem; padding-bottom: 4rem;">
-            <h1 class="font-bold text-4xl text-wrap justify-center  border-white border-b-2">ANY IDEA TO WORK ON?</h1>
-            <div class="font-normal text-black" style="margin: 3rem;">
-                <button class="p-2 cursor-pointer text-2xl"
-                    style="background-color: gray; border-radius: 8px; padding-bottom: 0.6rem;"><a
-                        href="contact.html">Contact Now
-                    </a></button>
+
+        <!-- mobile dialog -->
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 z-40">
+            <div class="absolute inset-0 bg-black/60" onclick="toggleMenu()"></div>
+            <div class="absolute right-4 top-6 w-[90vw] max-w-xs bg-white text-black rounded-lg p-4 shadow-lg">
+                <div class="flex items-center justify-between mb-4">
+                    <img src="images/s-png-28667.png" alt="logo" class="h-10" />
+                    <button onclick="toggleMenu()" aria-label="close" class="p-1">
+                        <img src="images/close.png" alt="close" class="h-6" />
+                    </button>
+                </div>
+                <nav class="flex flex-col gap-3">
+                    <a href="index.html" class="p-3 rounded hover:bg-slate-100">Home</a>
+                    <a href="error.html" class="p-3 rounded hover:bg-slate-100">About</a>
+                    <a href="services.html" class="p-3 rounded hover:bg-slate-100">Services</a>
+                    <a href="projects.html" class="p-3 rounded hover:bg-slate-100">Projects</a>
+                    <a href="contact.html"
+                        class="mt-2 p-3 rounded bg-gradient-to-r from-indigo-500 to-pink-500 text-black text-center">Contact</a>
+                </nav>
             </div>
         </div>
-        <div class="flex flex-wrap justify-evenly w-full justify-items-center">
-            <div class="text-white justify-center items-center">
-                <p class="text-3xl font-medium" style="padding:0 0 1rem 0;">Follow Me</p>
-                <div class="w-full border-white border-b-2"></div>
-                <p class="cursor-pointer text-lg font-normal p-1"><a
-                        href="https://www.linkedin.com/in/sarthak-singh-866455253/">Linkedin</a></p>
-                <p class="cursor-pointer text-lg font-normal p-1"><a
-                        href="https://www.instagram.com/yo._sarthak_/">Instagram</a></p>
-                <p class="cursor-pointer text-lg font-normal p-1"><a href="https://github.com/Sarthak01819">GitHub</a>
+    </header>
+
+    <main class="pt-28">
+
+        <!-- HERO -->
+        <section id="home"
+            class="max-w-6xl mx-auto px-6 py-12 md:py-20 flex flex-col-reverse md:flex-row items-center gap-12">
+            <!-- Left - Text -->
+            <div class="w-full md:w-1/2">
+                <div class="inline-flex items-center gap-3 mb-4">
+                    <div class="rounded-full p-2 bg-gradient-to-tr from-pink-500 to-indigo-500">
+                        <img src="images/s-png-28667.png" alt="logo" class="h-10 w-auto" />
+                    </div>
+                    <div class="text-sm uppercase tracking-wide text-gray-300">Hi, I’m Sarthak</div>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+                    I build beautiful <span
+                        class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-pink-400">web
+                        experiences</span>
+                </h1>
+
+                <p class="mt-6 text-gray-300 max-w-xl">
+                    Creative developer & designer crafting interactive, responsive websites and web apps. I combine
+                    design thinking with clean code to deliver delightful user experiences.
                 </p>
-            </div>
-            <div class="text-white  justify-center items-center">
-                <p class="text-3xl font-medium" style="padding:0 0 1rem 0;">Services</p>
-                <div class="w-full border-white border-b-2"></div>
-                <p class="cursor-pointer text-lg font-normal p-1">Web Design</p>
-                <p class="cursor-pointer text-lg font-normal p-1">Development</p>
-                <p class="cursor-pointer text-lg font-normal p-1">UI/UX Design</p>
-                <p class="cursor-pointer text-lg font-normal p-1">Video Editing</p>
-            </div>
-            <div class="text-white  justify-center items-center">
-                <p class="text-3xl font-medium" style="padding:0 0 1rem 0;">Skill</p>
-                <div class="w-full border-white border-b-2"></div>
-                <div class="grid" style="grid-template-columns:  6rem 7rem;">
-                    <p class="cursor-pointer text-lg font-normal p-1">Tailwind</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">JavaScript</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">GitHub</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">Figma</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">Node js</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">Python</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">Java</p>
-                    <p class="cursor-pointer text-lg font-normal p-1">Premiere Pro</p>
+
+                <div class="mt-8 flex gap-4">
+                    <a href="projects.html"
+                        class="px-5 py-3 rounded-md bg-white/10 hover:bg-white/20 transition backdrop-blur-sm">See
+                        Projects</a>
+                    <a href="contact.html"
+                        class="px-5 py-3 rounded-md bg-gradient-to-r from-indigo-500 to-pink-500 text-black font-semibold shadow glow">Contact
+                        Now</a>
+                </div>
+
+                <!-- Tech chips -->
+                <div class="mt-8 flex gap-3 flex-wrap">
+                    <span class="text-xs px-3 py-1 rounded-full bg-white/5">Tailwind</span>
+                    <span class="text-xs px-3 py-1 rounded-full bg-white/5">React</span>
+                    <span class="text-xs px-3 py-1 rounded-full bg-white/5">Node.js</span>
+                    <span class="text-xs px-3 py-1 rounded-full bg-white/5">Python</span>
+                    <span class="text-xs px-3 py-1 rounded-full bg-white/5">Figma</span>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Contact Box & Skill Box Ends Here -->
 
-    <!-- Credit & Copyright starts here  -->
-    <div class="text-black bg-white w-full flex flex-wrap justify-around" style="padding: 2.5rem;">
-        <div>Design & Developed by <a class="underline" href="#">Sarthak Singh</a></div>
-        <div>Copyright © Sarthak Singh. All Rights Reserved</div>
-    </div>
-    <!-- Credit & Copyright starts here -->
+            <!-- Right - Image with gradient frame -->
+            <div class="w-full md:w-1/2 flex justify-center mt-6 md:mt-12">
+                <div class="relative">
+
+                    <div class="rounded-2xl p-1 bg-gradient-to-tr from-pink-500 to-indigo-500 transform rotate-2">
+                        <img class="" src="images/pfp.jpg" alt="Sarthak Singh"
+                            class="block rounded-2xl object-cover w-80 h-80 md:w-96 md:h-96" />
+                    </div>
+                    <div class="absolute -left-6 -bottom-6 md:-left-8 md:-bottom-8 opacity-60">
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="g" x1="0" x2="1">
+                                    <stop offset="0" stop-color="#7C3AED" stop-opacity="0.22" />
+                                    <stop offset="1" stop-color="#EC4899" stop-opacity="0.18" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="120" height="120" rx="16" fill="url(#g)" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT / TECH STACK -->
+        <section id="about" class="py-20 bg-gradient-to-br from-[#0a0a1a] via-[#0b0b25] to-[#0f0f33] text-white">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-12">
+
+                <!-- About Text -->
+                <div class="flex-1">
+                    <h2
+                        class="text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                        About Me
+                    </h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        I'm a <span class="font-semibold text-blue-400">Full Stack Developer</span> who loves crafting
+                        interactive, fast, and aesthetic web experiences.
+                        I focus on clean UI, smooth UX, and scalable backend architecture — turning ideas into real,
+                        functional products.
+                        I specialize in technologies across the MERN stack, modern frontend frameworks, and creative
+                        design tools.
+                    </p>
+                    <p class="text-gray-400">
+                        I enjoy bridging the gap between design and development — building solutions that look great,
+                        perform well, and make users happy.
+                    </p>
+                </div>
+
+                <!-- Tech Stack -->
+                <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-4">
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="wind" class="w-5 h-5 text-sky-400"></i>
+                        <span class="text-sm font-medium">Tailwind</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="file-code" class="w-5 h-5 text-yellow-400"></i>
+                        <span class="text-sm font-medium">JavaScript</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="server" class="w-5 h-5 text-green-400"></i>
+                        <span class="text-sm font-medium">Node.js</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="scroll-text" class="w-5 h-5 text-yellow-300"></i>
+                        <span class="text-sm font-medium">Python</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="github" class="w-5 h-5 text-gray-300"></i>
+                        <span class="text-sm font-medium">GitHub</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="figma" class="w-5 h-5 text-pink-400"></i>
+                        <span class="text-sm font-medium">Figma</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="terminal" class="w-5 h-5 text-orange-400"></i>
+                        <span class="text-sm font-medium">Java</span>
+                    </div>
+
+                    <div class="flex items-center gap-3 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-all">
+                        <i data-lucide="film" class="w-5 h-5 text-purple-400"></i>
+                        <span class="text-sm font-medium">Premiere Pro</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SERVICES -->
+        <section id="services" class="bg-white/2 py-12">
+            <div class="max-w-6xl mx-auto px-6">
+                <h3 class="text-3xl font-bold text-white mb-8">Services</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <article
+                        class="p-6 rounded-xl bg-gradient-to-br from-white/3 to-white/5 hover:scale-[1.02] transition">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-md bg-white/6 mb-4">
+                            <i data-lucide="palette" class="w-6 h-6 text-pink-400"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Web Design</h4>
+                        <p class="text-sm text-gray-300">Creative websites with intuitive UX and responsive layouts.</p>
+                        <p class="mt-3 text-sm"><strong>Skills:</strong> UI/UX, Figma, HTML/CSS, Webflow</p>
+                    </article>
+
+                    <article
+                        class="p-6 rounded-xl bg-gradient-to-br from-white/3 to-white/5 hover:scale-[1.02] transition">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-md bg-white/6 mb-4">
+                            <i data-lucide="code" class="w-6 h-6 text-indigo-400"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Development</h4>
+                        <p class="text-sm text-gray-300">Full-stack development to ship scalable, maintainable apps.</p>
+                        <p class="mt-3 text-sm"><strong>Skills:</strong> React, Node.js, Python, Cloud</p>
+                    </article>
+
+                    <article
+                        class="p-6 rounded-xl bg-gradient-to-br from-white/3 to-white/5 hover:scale-[1.02] transition">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-md bg-white/6 mb-4">
+                            <i data-lucide="layout-dashboard" class="w-6 h-6 text-purple-400"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">UI/UX Design</h4>
+                        <p class="text-sm text-gray-300">Wireframes, prototypes and design systems that scale.</p>
+                        <p class="mt-3 text-sm"><strong>Skills:</strong> Figma, Prototyping, Usability</p>
+                    </article>
+
+                    <article
+                        class="p-6 rounded-xl bg-gradient-to-br from-white/3 to-white/5 hover:scale-[1.02] transition">
+                        <div class="inline-flex items-center justify-center w-12 h-12 rounded-md bg-white/6 mb-4">
+                            <i data-lucide="video" class="w-6 h-6 text-blue-400"></i>
+                        </div>
+                        <h4 class="text-xl font-semibold mb-2">Video Editing</h4>
+                        <p class="text-sm text-gray-300">Editing, color grading, motion graphics for polished videos.
+                        </p>
+                        <p class="mt-3 text-sm"><strong>Skills:</strong> Premiere Pro, DaVinci</p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section id="projects" class="max-w-6xl mx-auto px-6 py-12">
+            <h3 class="text-3xl font-bold mb-8">Projects</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project card -->
+                <div class="flex flex-col md:flex-row gap-4 items-start">
+                    <img src="images/NetflixClone.jpg" alt="Netflix Clone"
+                        class="rounded-lg w-full md:w-56 h-40 object-cover shadow-lg" />
+                    <div class="flex-1">
+                        <h4 class="text-2xl font-bold">Netflix Clone</h4>
+                        <p class="text-sm text-gray-300 mt-2">A pixel-perfect responsive Netflix homepage replica using
+                            HTML & CSS with interactive hover effects.</p>
+                        <div class="mt-4 flex gap-3">
+                            <a class="text-sm px-3 py-2 rounded bg-white/5" href="#">View</a>
+                            <a class="text-sm px-3 py-2 rounded bg-white/5" href="#">Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4 items-start">
+                    <img src="images/DummyPortfolio.jpg" alt="Dummy Portfolio"
+                        class="rounded-lg w-full md:w-56 h-40 object-cover shadow-lg" />
+                    <div class="flex-1">
+                        <h4 class="text-2xl font-bold">Responsive Dummy Portfolio</h4>
+                        <p class="text-sm text-gray-300 mt-2">Sleek portfolio layout with modern responsiveness and
+                            interactive elements.</p>
+                        <div class="mt-4 flex gap-3">
+                            <a class="text-sm px-3 py-2 rounded bg-white/5" href="#">View</a>
+                            <a class="text-sm px-3 py-2 rounded bg-white/5" href="#">Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-4 items-start">
+                    <img src="images/spotifyclone.png" alt="Spotify Clone"
+                        class="rounded-lg w-full md:w-56 h-40 object-cover shadow-lg" />
+                    <div class="flex-1">
+                        <h4 class="text-2xl font-bold">Spotify Clone</h4>
+                        <p class="text-sm text-gray-300 mt-2">Web music player with dynamic song loading, playback
+                            controls and keyboard shortcuts.</p>
+                        <div class="mt-4 flex gap-3">
+                            <a class="text-sm px-3 py-2 rounded bg-white/5" href="#">View</a>
+                            <a class="text-sm px-3 py-2 rounded bg-white/5" href="#">Source</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- add more projects as needed -->
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="bg-gradient-to-r from-indigo-700/30 to-pink-600/20 py-12">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <h4 class="text-2xl font-bold">Got an idea? Let’s build it.</h4>
+                    <p class="text-gray-300 mt-1">I’m available for freelance & project collaborations.</p>
+                </div>
+                <div>
+                    <a href="contact.html"
+                        class="px-6 py-3 rounded-md bg-gradient-to-r from-indigo-500 to-pink-500 text-black font-semibold shadow">Contact
+                        Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER / CONTACT & SKILLS -->
+        <footer class="max-w-6xl mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-300">
+                <div>
+                    <h5 class="text-lg font-semibold text-white">Follow Me</h5>
+                    <div class="mt-3 space-y-2">
+                        <a href="https://www.linkedin.com/in/sarthak-singh-866455253/"
+                            class="block hover:text-indigo-300">LinkedIn</a>
+                        <a href="https://www.instagram.com/yo._sarthak_/"
+                            class="block hover:text-indigo-300">Instagram</a>
+                        <a href="https://github.com/Sarthak01819" class="block hover:text-indigo-300">GitHub</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white">Services</h5>
+                    <ul class="mt-3 space-y-2 text-gray-300">
+                        <li>Web Design</li>
+                        <li>Development</li>
+                        <li>UI/UX Design</li>
+                        <li>Video Editing</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white">Skills</h5>
+                    <div class="mt-3 grid grid-cols-2 gap-2 text-gray-300">
+                        <span>Tailwind</span><span>JavaScript</span>
+                        <span>GitHub</span><span>Figma</span>
+                        <span>Node.js</span><span>Python</span>
+                        <span>Java</span><span>Premiere Pro</span>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="mt-10 border-t border-white/8 pt-6 text-sm text-gray-400 flex flex-col md:flex-row justify-between">
+                <div>Design & Developed by <a href="#" class="underline">Sarthak Singh</a></div>
+                <div>Copyright © <span id="year"></span> Sarthak Singh. All Rights Reserved</div>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        // Menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  });
+
+        // Attach handlers
+        menuBtn && menuBtn.addEventListener('click', toggleMenu);
+
+        // Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    
 
 </body>
-<script src="script.js"></script>
 
 </html>

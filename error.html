@@ -2,94 +2,113 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/output.css">
-    <title>Error - 404</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/output.css">
+  <title>Error - 404</title>
 </head>
 
-<body class="bg-[#0b0b0b]">
-    <!-- Nav Starts here -->
-    <nav class="w-full fixed flex justify-between px-2 bg-white" style="height: 3rem;">
-        <!-- <div class="text-black font-bold text-4xl cursor-pointer">SARTHAK</div> -->
-        <img style="height: 47px;" src="images/s-png-28667.png" alt="Sarthak Singh">
-        <div class="">
-            <ul class="p-3 text-black font-medium hidden md:flex">
-                <li class="px-4 cursor-pointer"><a href="index.html">Home</a></li>
-                <li class="px-4 cursor-pointer"><a href="error.html">About</a></li>
-                <li class="px-4 cursor-pointer"><a href="sevices.html">Services</a></li>
-                <li class="px-4 cursor-pointer"><a href="projects.html">Projects</a></li>
-            </ul>
-        </div>
-        <div class="text-black text-2xl font-medium hidden md:flex"><button><a href="contact.html">CONTACT</a></button>
-        </div>
-        <button class=" md:hidden p-2" onclick="handleMenu()"><img style="height: 30px; width: auto; color: black; "
-                src="images/menu.png" alt="Menu Button"></button>
+<body class="bg-[#0b0b0b] overflow-x-hidden">
 
-        <div id="nav-dialog" class="fixed hidden bg-white inset-0 px-2" style="height: 3rem;">
-            <div id="nav-bar" class="flex justify-between">
-                <img style="height: 47px;" src="images/s-png-28667.png" alt="Sarthak Singh">
-                <button class=" md:hidden p-2" onclick="handleMenu()"><img
-                        style="height: 26px; width: auto; color: black; " src="images/close.png"
-                        alt="Menu Button"></button>
-            </div>
-            <div class="bg-white" style="margin-top: 1rem; border-radius: 10px;">
-                <a class="font-medium m-3 p-3 block" href="index.html">Home</a>
-                <a class="font-medium m-3 p-3 block" href="error.html">About</a>
-                <a class="font-medium m-3 p-3 block" href="sevices.html">Services</a>
-                <a class="font-medium m-3 p-3 block" href="projects.html">Projects</a>
-            </div>
-        </div>
-    </nav>
-    <!-- Nav ends here -->
+  <!-- 🌈 Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 backdrop-blur-lg shadow-lg">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <img src="images/s-png-28667.png" alt="Sarthak Singh" class="h-10 w-auto drop-shadow-md">
+        <span class="text-white font-extrabold text-2xl tracking-wide hover:text-blue-300 transition-all duration-300">
+          SARTHAK
+        </span>
+      </a>
 
-    <!-- Error page starts here  -->
-    <div class="w-full justify-items-center border-white border-b-2" style=" padding-top: 6rem; padding-bottom: 2rem; margin-bottom: 4rem;">
-        <div class="justify-items-center ">
-            <h1 class="text-white font-bold" style="font-size: 7rem; "><b>404</b></h1>
-            <p class="text-white font-medium text-2xl">Page Under Maintenance...</p>
-            <div class="font-normal text-black " style="margin: 3rem;">
-                <button class="p-2 cursor-pointer text-2xl"
-                    style="background-color: gray; border-radius: 8px; padding-bottom: 0.6rem;"><a href="index.html">Go
-                        Back ->
-                    </a></button>
-            </div>
-        </div>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8 text-white font-medium text-lg">
+        <li><a href="index.html" class="hover:text-blue-400 transition-all duration-300">Home</a></li>
+        <li><a href="error.html" class="hover:text-blue-400 transition-all duration-300">About</a></li>
+        <li><a href="services.html" class="hover:text-blue-400 transition-all duration-300">Services</a></li>
+        <li><a href="projects.html" class="hover:text-blue-400 transition-all duration-300">Projects</a></li>
+      </ul>
+
+      <!-- Contact Button -->
+      <div class="hidden md:block">
+        <a href="contact.html"
+          class="px-5 py-2 bg-white text-blue-900 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-md">
+          Contact
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none">
+        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
     </div>
-    <!-- Error page ends here  -->
 
-    <!-- Contact box starts here  -->
-    <div class="flex flex-wrap w-full justify-center items-center" style="padding-bottom: 3rem;">
-        <div class="justify-items-center" style="padding-left: 2rem; width: 50%;">
-            <div class="text-4xl text-white font-bold">
-                <p>SHARE YOUR PROJECT IDEAS</p>
-                <p>WITH ME!</p>
-            </div>
-            <div class="font-normal text-black" style="margin: 3rem;">
-                <button class="p-2 cursor-pointer text-2xl"
-                    style="background-color: gray; border-radius: 8px; padding-bottom: 0.6rem;"><a
-                        href="contact.html">Contact Now
-                    </a></button>
-            </div>
-        </div>
-        <div class="flex flex-wrap justify-evenly w-full justify-items-center" style=" width: 50%;">
-            <div class="text-white justify-center items-center">
-                <p class="text-3xl font-medium" style="padding:0 0 1rem 0;">Follow Me</p>
-                <div class="w-full border-white border-b-2"></div>
-                <p class="cursor-pointer text-lg font-normal p-1"><a href="https://www.linkedin.com/in/sarthak-singh-866455253/">Linkedin</a></p>
-                <p class="cursor-pointer text-lg font-normal p-1"><a href="https://www.instagram.com/yo._sarthak_/">Instagram</a></p>
-                <p class="cursor-pointer text-lg font-normal p-1"><a href="https://github.com/Sarthak01819">GitHub</a></p>
-            </div>
-        </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu"
+      class="hidden flex-col md:hidden bg-gradient-to-b from-blue-900 to-purple-900 px-6 py-4 space-y-4">
+      <a href="index.html" class="text-white text-lg hover:text-blue-300 transition">Home</a>
+      <a href="error.html" class="text-white text-lg hover:text-blue-300 transition">About</a>
+      <a href="services.html" class="text-white text-lg hover:text-blue-300 transition">Services</a>
+      <a href="projects.html" class="text-white text-lg hover:text-blue-300 transition">Projects</a>
+      <a href="contact.html"
+        class="text-white text-lg font-semibold bg-blue-500 py-2 rounded-full text-center hover:bg-blue-600 transition">Contact</a>
     </div>
-    <!-- Contact box starts here  -->
+  </nav>
 
-    <!-- Credit & Copyright starts here  -->
-    <div class="text-black bg-white w-full flex flex-wrap justify-around" style="padding: 2.5rem;">
-        <div>Design & Developed by <a class="underline" href="#">Sarthak Singh</a></div>
-        <div>Copyright © Sarthak Singh. All Rights Reserved</div>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      mobileMenu.classList.toggle('flex');
+    });
+  </script>
+  <!-- Navbar Ends -->
+
+  <!-- 🚫 404 Section -->
+  <section class="flex flex-col items-center justify-center min-h-screen text-center text-white px-6 pt-24">
+    <h1
+      class="text-[10rem] md:text-[15rem] font-extrabold bg-gradient-to-r from-blue-400 via-purple-500 to-indigo-400 bg-clip-text text-transparent animate-pulse drop-shadow-[0_0_15px_rgba(79,70,229,0.7)]">
+      404
+    </h1>
+    <p class="text-2xl md:text-3xl font-medium mb-6 animate-fade-in">Page Under Maintenance...</p>
+
+    <a href="index.html"
+      class="mt-4 px-8 py-3 text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg hover:scale-105 hover:shadow-[0_0_20px_rgba(99,102,241,0.7)] transition-all duration-300">
+      Go Back →
+    </a>
+  </section>
+
+  <!-- ✨ CTA Section -->
+  <div class="flex flex-wrap justify-center items-center py-16 border-t border-gray-700 text-white">
+    <div class="w-full md:w-1/2 text-center md:text-left px-6">
+      <h2 class="text-4xl font-bold mb-6">Share Your Project Ideas<br>With Me!</h2>
+      <a href="contact.html"
+        class="px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full text-lg font-medium hover:scale-105 hover:shadow-[0_0_15px_rgba(147,51,234,0.7)] transition-all duration-300">
+        Contact Now
+      </a>
     </div>
-    <!-- Credit & Copyright starts here -->
+
+    <div class="w-full md:w-1/2 text-center md:text-left px-6 mt-8 md:mt-0">
+      <h3 class="text-3xl font-medium mb-3">Follow Me</h3>
+      <div class="w-24 mx-auto md:mx-0 h-[2px] bg-gradient-to-r from-blue-400 to-purple-600 mb-4"></div>
+      <p class="text-lg mb-2"><a href="https://www.linkedin.com/in/sarthak-singh-866455253/"
+          class="hover:text-blue-400 transition">LinkedIn</a></p>
+      <p class="text-lg mb-2"><a href="https://www.instagram.com/yo._sarthak_/"
+          class="hover:text-pink-400 transition">Instagram</a></p>
+      <p class="text-lg"><a href="https://github.com/Sarthak01819" class="hover:text-gray-400 transition">GitHub</a></p>
+    </div>
+  </div>
+
+  <!-- ⚙️ Footer -->
+  <footer class="text-black bg-white flex flex-wrap justify-around py-6 text-center md:text-left">
+    <div>Design & Developed by <a href="#" class="underline font-semibold">Sarthak Singh</a></div>
+    <div>Copyright © Sarthak Singh. All Rights Reserved</div>
+  </footer>
+
 </body>
-<script src="script.js"></script>
+
 </html>

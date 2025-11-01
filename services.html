@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarthak Singh — Services</title>
+  <link rel="stylesheet" href="src/output.css" />
+</head>
+
+<body class="bg-[#0a0a1a] text-white antialiased">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-900 via-purple-900 to-indigo-900 backdrop-blur-lg shadow-lg">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center space-x-2">
+      <img src="images/s-png-28667.png" alt="Sarthak Singh" class="h-10 w-auto drop-shadow-md">
+      <span class="text-white font-extrabold text-2xl tracking-wide hover:text-blue-300 transition-all duration-300">
+        SARTHAK
+      </span>
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex space-x-8 text-white font-medium text-lg">
+      <li><a href="index.html" class="hover:text-blue-400 transition-all duration-300">Home</a></li>
+      <li><a href="error.html" class="hover:text-blue-400 transition-all duration-300">About</a></li>
+      <li><a href="services.html" class="hover:text-blue-400 transition-all duration-300">Services</a></li>
+      <li><a href="projects.html" class="hover:text-blue-400 transition-all duration-300">Projects</a></li>
+    </ul>
+
+    <!-- Contact Button -->
+    <div class="hidden md:block">
+      <a href="contact.html" class="px-5 py-2 bg-white text-blue-900 rounded-full font-semibold hover:bg-blue-500 hover:text-white transition-all duration-300 shadow-md">
+        Contact
+      </a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden focus:outline-none">
+      <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" stroke-width="2"
+           viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden flex-col md:hidden bg-gradient-to-b from-blue-900 to-purple-900 px-6 py-4 space-y-4">
+    <a href="index.html" class="text-white text-lg hover:text-blue-300 transition">Home</a>
+    <a href="error.html" class="text-white text-lg hover:text-blue-300 transition">About</a>
+    <a href="services.html" class="text-white text-lg hover:text-blue-300 transition">Services</a>
+    <a href="projects.html" class="text-white text-lg hover:text-blue-300 transition">Projects</a>
+    <a href="contact.html" class="text-white text-lg font-semibold bg-blue-500 py-2 rounded-full text-center hover:bg-blue-600 transition">Contact</a>
+  </div>
+</nav>
+
+
+  <!-- Mobile Menu -->
+  <div id="nav-dialog" class="fixed hidden inset-0 bg-[#0a0a1a] z-40 flex flex-col items-center justify-center gap-6 text-xl font-medium">
+    <button class="absolute top-6 right-6" onclick="handleMenu()">
+      <img src="images/close.png" class="h-6" alt="close" />
+    </button>
+    <a href="index.html" class="hover:text-indigo-400" onclick="handleMenu()">Home</a>
+    <a href="error.html" class="hover:text-indigo-400" onclick="handleMenu()">About</a>
+    <a href="services.html" class="text-indigo-400" onclick="handleMenu()">Services</a>
+    <a href="projects.html" class="hover:text-indigo-400" onclick="handleMenu()">Projects</a>
+    <a href="contact.html" class="px-6 py-2 bg-gradient-to-r from-indigo-500 to-pink-500 rounded text-black font-semibold" onclick="handleMenu()">Contact</a>
+  </div>
+
+  <!-- Services Section -->
+  <section class="pt-32 pb-20 px-6 text-center bg-gradient-to-br from-[#0a0a1a] via-[#0d0d28] to-[#12123a]">
+    <h1 class="text-5xl font-bold mb-10 bg-gradient-to-r from-blue-400 to-pink-500 bg-clip-text text-transparent">
+      Services
+    </h1>
+
+    <div class="max-w-6xl mx-auto grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Service Card -->
+      <div class="group bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all">
+        <div class="flex justify-center mb-5">
+          <i data-lucide="layout" class="w-10 h-10 text-blue-400 group-hover:scale-110 transition-transform"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Web Design</h3>
+        <p class="text-gray-400 mb-3">
+          Crafting visually stunning and user-friendly designs that make your brand shine online. 🎨
+        </p>
+        <p><span class="font-bold text-indigo-400">Skills:</span> UI/UX, Figma, Adobe XD, HTML, CSS, Webflow.</p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="group bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all">
+        <div class="flex justify-center mb-5">
+          <i data-lucide="code" class="w-10 h-10 text-green-400 group-hover:scale-110 transition-transform"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Development</h3>
+        <p class="text-gray-400 mb-3">
+          Building fast, responsive, and scalable apps using clean, maintainable code. 🚀
+        </p>
+        <p><span class="font-bold text-indigo-400">Skills:</span> React, Node.js, Express, Python, Cloud Tech.</p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="group bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all">
+        <div class="flex justify-center mb-5">
+          <i data-lucide="pen-tool" class="w-10 h-10 text-purple-400 group-hover:scale-110 transition-transform"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">UI / UX Design</h3>
+        <p class="text-gray-400 mb-3">
+          Blending creativity and usability to design seamless digital experiences. ✨
+        </p>
+        <p><span class="font-bold text-indigo-400">Skills:</span> Figma, Adobe XD, Wireframing, Prototyping.</p>
+      </div>
+
+      <!-- Service Card -->
+      <div class="group bg-white/5 backdrop-blur-md p-8 rounded-2xl border border-white/10 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all">
+        <div class="flex justify-center mb-5">
+          <i data-lucide="video" class="w-10 h-10 text-pink-400 group-hover:scale-110 transition-transform"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Video Editing</h3>
+        <p class="text-gray-400 mb-3">
+          Engaging video storytelling through cinematic cuts, transitions, and color grading. 🎬
+        </p>
+        <p><span class="font-bold text-indigo-400">Skills:</span> Premiere Pro, After Effects, CapCut, DaVinci.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-indigo-600 to-pink-600 text-center text-white">
+    <h2 class="text-4xl font-bold mb-6">Share Your Project Ideas With Me!</h2>
+    <a href="contact.html"
+       class="inline-block bg-black text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:shadow-xl hover:scale-105 transition">
+       Contact Now
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#0b0b20] border-t border-white/10 py-8 text-center text-gray-400 text-sm">
+    <p>Design & Developed by <a href="#" class="text-indigo-400 hover:underline">Sarthak Singh</a></p>
+    <p class="mt-2">© 2025 Sarthak Singh. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    mobileMenu.classList.toggle('flex');
+  });
+</script>
+</body>
+</html>
